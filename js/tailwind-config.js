@@ -1,0 +1,4 @@
+/* Tailwind (Play CDN) settings: preflight off + custom animations (fade-up, float, marquee, spin-slow).
+   Must load right after the Tailwind CDN script in index.html. */
+/* Tailwind: preflight off so it never overrides the custom styles; custom animations defined here */
+tailwind.config={corePlugins:{preflight:false},theme:{extend:{keyframes:{'fade-up':{'0%':{opacity:'0',transform:'translateY(26px)'},'100%':{opacity:'1',transform:'none'}},float:{'0%,100%':{transform:'translateY(0)'},'50%':{transform:'translateY(-14px)'}},marquee:{'0%':{transform:'translateX(0)'},'100%':{transform:'translateX(-50%)'}}},animation:{'fade-up':'fade-up .9s cubic-bezier(.2,.7,.2,1) both',float:'float 7s ease-in-out infinite','float-slow':'float 11s ease-in-out infinite','spin-slow':'spin 16s linear infinite',marquee:'marquee 38s linear infinite'}}}}
